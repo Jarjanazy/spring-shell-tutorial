@@ -5,12 +5,12 @@ import org.jline.utils.AttributedStyle;
 import org.springframework.shell.jline.PromptProvider;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class CustomPromptProvider implements PromptProvider {
     @Override
     public AttributedString getPrompt() {
             return new AttributedString(
-                    "Cool Machine" + "==>",
-                    AttributedStyle.DEFAULT.foreground(AttributedStyle.GREEN));
+                    "Cool Machine" + "==> ",
+                    AttributedStyle.DEFAULT.background(AttributedStyle.GREEN));
     }
 }
