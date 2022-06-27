@@ -10,7 +10,7 @@ public class CustomPromptProvider implements PromptProvider {
     @Override
     public AttributedString getPrompt() {
             return new AttributedString(
-                    "Cool Machine" + "==> ",
+                    "$ ",
                     AttributedStyle.DEFAULT.background(AttributedStyle.GREEN));
     }
 }

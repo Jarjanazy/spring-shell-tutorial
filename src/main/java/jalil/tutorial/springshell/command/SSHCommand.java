@@ -14,25 +14,25 @@ import static java.lang.String.format;
 public class SSHCommand {
     Logger log = Logger.getLogger(SSHCommand.class.getName());
 
-    @ShellMethod(value = "connect to remote server")
-    public void ssh(@ShellOption(value = "--s", defaultValue = "default-server") String remoteServer)
+    @ShellMethod(value = "Connect to remote server.")
+    public void ssh(@ShellOption(value = "--server-name", defaultValue = "localhost") String serverName)
     {
-        log.info(format("Logged to machine '%s'", remoteServer));
+        log.info(format("Logged to machine '%s'", serverName));
     }
 
-    @ShellMethod(value = "add keys")
+    @ShellMethod(value = "Add keys.")
     public void sshAdd(@ShellOption(value = "--k", arity = 2) String[] keys)
     {
         log.info(format("Adding keys '%s' '%s'", keys[0], keys[1]));
     }
 
-    @ShellMethod(value = "sign in")
+    @ShellMethod(value = "Sign in.")
     public void sshLogin(@ShellOption(value = "--r") boolean rememberMe)
     {
         log.info(format("remember me option is '%s'", rememberMe));
     }
 
-    @ShellMethod(value = "ssh agent")
+    @ShellMethod(value = "SSH agent.")
     public void sshAgent(
             @ShellOption(value = "--a")
             @Size(min = 2, max = 10) String agent)
