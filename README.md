@@ -6,7 +6,7 @@ According to the documentation [https://spring.io/projects/spring-shell](https:/
 
 > Users of the Spring Shell project can easily build a full featured shell (aka command line) application by depending on the Spring Shell jars and adding their own commands (which come as methods on spring beans). Creating a command line application can be useful e.g. to interact with your project’s REST API, or to work with local file content.
 
-That is, the Spring Shell project allows you to build a command line application, leveraging many of its features including tab completion, colorization and more.
+That is, the Spring Shell project allows you to build a command line application, leveraging many of its features including tab completion, colorization, help pages and more.
 
 ## Usage
 
